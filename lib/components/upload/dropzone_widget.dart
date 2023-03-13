@@ -1,11 +1,8 @@
 import 'dart:async';
-import 'dart:html';
-import 'dart:typed_data';
-import 'package:firebase_storage/firebase_storage.dart';
-import 'package:intl/intl.dart';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
+import 'dart:typed_data';
+import 'dart:io';
+
 import 'package:firebase_storage_web/firebase_storage_web.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dropzone/flutter_dropzone.dart';
@@ -111,32 +108,3 @@ class _DropzoneWidgetState extends State<DropzoneWidget> {
     ref.putFile(event);
   }
 }
-
-/*
-
-Future uploadFile(event) async {
-    final ref =
-        FirebaseStorage.instance.ref().child('images_web/${event.name}}');
-    ref.putFile(event);
-  }
-
-  Future uploadImageUp({required dynamic event}) async {
-    const path = 'images_web/firstimage.jpg';
-    final file = event;
-
-    final ref = FirebaseStorage.instance.ref().child(path);
-    ref.putFile(file);
-  }
-
-*/
-
-/*
-
-if (events.isNotEmpty) {
-                      acceptFile(events.first);
-                      print("----------------Going to upload file 1");
-                      uploadWebImage(events.first);
-                      print("-----------------Uploaded File 1");
-                    }
-
-*/

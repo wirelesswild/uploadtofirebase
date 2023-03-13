@@ -4,6 +4,7 @@ import 'dart:typed_data';
 class DroppedFile {
   final String name;
   final int bytes;
+
   final String url;
   final Stream<List<int>> stream;
   final Uint8List data;
